@@ -1,8 +1,8 @@
 export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
-  title: "记录",
+  title: "一些记录",
   /** your name */
-  author: "kks",
+  author: "Some Normal Notes",
   /** website description */
   desc: "Rediscory the beauty of typography",
   /** your deployed domain */
@@ -60,7 +60,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** your category name mapping, which the `path` will be shown in the url */
   category_map: [
     { name: "胡适", path: "hu-shi" },
-    { name: "食物", path: "food" },
+    // { name: "食物", path: "food" },
   ],
   /** your comment provider */
   comments: {

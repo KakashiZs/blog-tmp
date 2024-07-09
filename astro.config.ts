@@ -9,19 +9,17 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: THEME_CONFIG.website,
   prefetch: true,
+  server: {
+    host: true
+  },
   markdown: {
     shikiConfig: {
       theme: 'one-dark-pro',
       langs: [],
-      wrap: true,
-    },
+      wrap: true
+    }
   },
-  integrations: [
-    UnoCSS({
-      injectReset: true
-    }),
-    robotsTxt(),
-    sitemap(),
-    mdx()
-  ]
+  integrations: [UnoCSS({
+    injectReset: true
+  }), robotsTxt(), sitemap(), mdx()]
 });
