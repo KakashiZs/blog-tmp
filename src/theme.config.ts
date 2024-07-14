@@ -2,7 +2,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
   title: "一些记录",
   /** your name */
-  author: "Some Normal Notes",
+  author: "Something Memorable",
   /** website description */
   desc: "Rediscory the beauty of typography",
   /** your deployed domain */

@@ -1,8 +1,133 @@
 ---
 import LayoutDefault from "~/layouts/LayoutDefault.astro";
-import Player from '~/components/Player.astro';
+import Player from "~/components/Player.astro";
 ---
 
-<LayoutDefault contentTitle="关 于">
-  <Player />
+<LayoutDefault>
+  <!-- <img src="https://astro-notion-blog.pages.dev/notion/2f60064a-8f57-478f-b4f0-1d85f51ec588/EC946DBE-9A4C-47BA-827D-C0181EB54B0E.jpeg" alt=""> -->
+  <!-- <Player /> -->
+  <h1 class="sub-title">我的信息</h1>
+  <p class="content">- 山东枣庄人，现在上海</p>
+  <p class="content">- 从事软件开发工作，前端开发方向</p>
+  <p class="content">
+    - 计算机专业，本科毕业于<span class="university bachelor-university"
+      >****</span
+    >，研究生毕业于<span class="university master-university">****</span>
+  </p>
+
+  <h1 class="sub-title">我的兴趣</h1>
+
+  <h2 class="sub-title-2">书<span>-偏爱历史</span></h2>
+  <p class="content">
+    《三国演义》- 罗贯中 -
+    初中时看了一遍又一遍，几乎把书给翻烂了，当时可以清晰的说出每个回目的标题
+  </p>
+  <p class="content">《一句顶一万句》 - 刘震云</p>
+  <p class="content">《大明王朝 1566》- 刘和平</p>
+
+  <h2 class="sub-title-2">影视剧<span>- 喜欢具有厚重感历史剧</span></h2>
+  <p class="content">《三国演义》</p>
+  <p class="content">《大明王朝 1566》</p>
+  <p class="content">《贞观之治》</p>
+  <p class="content">《雍正王朝》</p>
+
+  <h2 class="sub-title-3">影视剧角色</h2>
+  <p class="content">
+    王用汲（字润莲） - 出自《大明王朝 1566》-
+    人如其名，温润似莲，谦谦有古君子之风
+  </p>
+
+  <h2 class="sub-title-2">动漫</h2>
+  <p class="content">《火影忍者》</p>
+
+  <h2 class="sub-title-3">动漫角色</h2>
+  <p class="content">旗木卡卡西 - 出自《火影忍者》</p>
+
+  <h2 class="sub-title-2">音乐</h2>
+  <h2 class="sub-title-3">音乐人</h2>
+  <p class="content">周杰伦</p>
+  <p class="content">许嵩</p>
+
+  <h2 class="sub-title-3">曲目</h2>
+  <p class="content">《土耳其冰淇淋》 - 音乐性很高的一首歌</p>
+  <p class="content">
+    《通关》 - 许嵩 -
+    “去洞庭湖底吃晚餐”，整首歌给人一种洒脱、浪漫、心怀感恩的感觉
+  </p>
+
+  <h1 class="sub-title">我的猫</h1>
+  <div class="img-box">
+    <img class="img-cat" src="https://pic.fatekks.one/file/90042e61d7cb3cfea203f.png" />
+    <img class="img-cat" src="https://pic.fatekks.one/file/a5d3a0be07055d32d28c8.png" />
+  </div>
+
+  <p class="content">名字：福仔</p>
+  <p class="content">种族：英短蓝猫</p>
+  <p class="content">性别：公公</p>
+  <p class="content">出生日期：2022-08-08</p>
+  <p class="content">性格：怂</p>
+  <p class="content">爱好：</p>
+  <p class="content" p-l-7>- 睡觉</p>
+  <p class="content" p-l-7>- 猫条和罐头</p>
+  <p class="content" p-l-7>- 玩巡回游戏</p>
+  <p class="content" p-l-7>- 窗边看鸟</p>
+  <p class="content" p-l-7>- 嘤嘤嘤</p>
 </LayoutDefault>
+
+<script>
+  function showUniversity(selector: string, university: string) {
+    const dom = document.querySelector(selector);
+
+    dom?.addEventListener("click", () => {
+      dom!.innerHTML = university;
+    });
+  }
+
+  showUniversity(".bachelor-university", "山东科技大学");
+  showUniversity(".master-university", "江南大学");
+</script>
+
+<style>
+  .university {
+    cursor: pointer;
+  }
+  .sub-title,
+  .sub-title-2,
+  .sub-title-3 {
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: "fangsong";
+    font-weight: 600;
+  }
+
+  .sub-title-2 {
+    font-size: 1.6rem;
+
+    span {
+      font-weight: normal;
+      margin-left: 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  .sub-title-3 {
+    font-size: 1.4rem;
+  }
+
+  .img-box {
+    display: flex;
+    justify-content: space-around;
+
+    .img-cat {
+      width: 10rem;
+      object-fit: contain;
+    }
+  }
+
+  .content {
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: "fangsong";
+  }
+</style>

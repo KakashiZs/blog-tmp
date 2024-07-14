@@ -5,9 +5,12 @@
     console.log("aaa");
   });
 
-  document.querySelector(".video-play-button")?.addEventListener("click", () => {
-    (document.querySelector(".video-wrapper") as HTMLElement).style.display = "block";
-  });
+  document
+    .querySelector(".video-play-button")
+    ?.addEventListener("click", () => {
+      (document.querySelector(".video-wrapper") as HTMLElement).style.display =
+        "block";
+    });
 </script>
 
 <div>
@@ -21,7 +24,11 @@
     src="//music.163.com/outchain/player?type=2&id=2602348432&auto=1&height=66"
   ></iframe>
   <button class="video-play-button">点击播放视频</button>
-  <div class="video-wrapper" style="display:none; position: relative; padding: 30% 45%; width:0; height: 0;";>
+  <div
+    class="video-wrapper"
+    style="display:none; position: relative; padding: 30% 45%; width:0; height: 0;"
+    ;
+  >
     <iframe
       style="position: absolute; width: 100%; height: 100%; left: 0; top: 0"
       src="//player.bilibili.com/player.html?isOutside=true&aid=42540945&bvid=BV1Pb411r7Tq&cid=74639047&p=1&auto=0"
@@ -29,4 +36,10 @@
       frameborder="no"
       allowfullscreen="true"></iframe>
   </div>
+  <h1>小偷公司</h1>
+  <iframe
+    src="//player.bilibili.com/player.html?isOutside=true&aid=893369146&bvid=BV1RP4y177D3&cid=487862730&p=1"
+    scrolling="no"
+    frameborder="no"
+    allowfullscreen="true"></iframe>
 </div>
